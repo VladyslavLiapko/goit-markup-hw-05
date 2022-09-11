@@ -423,6 +423,30 @@ button {
     gap: 30px;
 }
 
+.directions-overlay-wrapper {
+    position: relative;
+}
+
+.directions-overlay {
+    position: absolute;
+    width: 100%;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    margin: 0;
+    bottom: 0;
+    left: 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    background-color: rgba(47, 48, 58, 0.8);;
+    color: #FFFFFF;
+    overflow: auto;
+}
+
 
 
 /* team-section */
@@ -564,9 +588,38 @@ button {
     margin-top: 50px;   
 }
 
+.portfolio-list-img-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
 .overlay {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    color: rgba(255, 255, 255, 1);
+    padding: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    overflow: auto;
+    transform: translateY(100%);
+    transition:250ms cubic-bezier(0.4,0,0.2,1); 
 }
+
+.portfolio-list-link:hover .overlay,
+.portfolio-list-link:focus .overlay {
+    transform: translateY(0%);
+}
+
 
 .projects {
     padding: 20px 24px;
@@ -576,10 +629,6 @@ button {
 
 .portfolio-list-link{
     display: block;
-    transition: 250ms cubic-bezier(0.4,
-        0,
-        0.2,
-        1);
 }
 
 .portfolio-list-link:hover,
